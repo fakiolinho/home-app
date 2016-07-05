@@ -1,0 +1,31 @@
+<div class="page-header">
+    {{#if isOpen}}
+        <h1>Curtains <small>State: OPEN</small></h1>
+    {{else}}
+        <h1>Curtains <small>State: CLOSED</small></h1>
+    {{/if}}
+</div>
+
+<div class="panel panel-default box--shadow">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-xs-6">
+                Configure Curtains
+            </div>
+            <div class="col-xs-6 text-right">
+                {{#if isOpen}}
+                    <button type="button" {{action "toggleCurtains"}} class="btn btn-danger btn-sm box--shadow">Close Curtains</button>
+                {{else}}
+                    <button type="button" {{action "toggleCurtains"}} class="btn btn-success btn-sm box--shadow">Open Curtains</button>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    <div class="panel-body no-padding">
+        <div class="curtains">
+            <div class="curtain__bg"></div>
+            <div class="curtain__item curtain--left {{if isOpen 'curtain--open' 'curtain--close'}}"></div>
+            <div class="curtain__item curtain--right {{if isOpen 'curtain--open' 'curtain--close'}}"></div>
+        </div>
+    </div>
+</div>

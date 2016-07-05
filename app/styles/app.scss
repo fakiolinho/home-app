@@ -1,0 +1,120 @@
+@import "bootstrap";
+body {
+    padding-top: 80px;
+    background-color: #eee;
+}
+.text--blue {
+    color: #0390d7;
+    &:hover {
+        color: #0390d7;
+    }
+}
+.no-padding {
+    padding: 0 !important;
+}
+.box--shadow {
+    box-shadow: 0 2px 5px rgba(0,0,0,.225);
+}
+.thumbnail {
+    border-width: 2px;
+}
+.panel {
+    border: none;
+}
+.panel-heading {
+    line-height: 30px;
+}
+.configuration__option {
+    display: block;
+    text-align: center;
+    &:hover {
+        text-decoration: none;
+    }
+    .configuration__option__image {
+        display: inline-block;
+        width: 128px;
+        height: 128px;
+        margin: 40px auto 20px;
+        background: url('/assets/images/options_colors.png') no-repeat;
+        &.configuration__option__image--lights {
+            background-position: -256px 0;
+        }
+        &.configuration__option__image--temperature {
+            background-position: -128px 0;
+        }
+        &.configuration__option__image--curtains {
+            background-position: 0 0;
+        }
+    }
+}
+.lightbulb {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background: url('/assets/images/lightbulb.png') no-repeat;
+    margin: 50px auto;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 80px;
+        background-color: #000;
+        top: -75px;
+        left: 74px;
+    }
+    &.lightbulb--on {
+        background-position: 0 0;
+    }
+    &.lightbulb--off {
+        background-position: -150px 0;
+    }
+}
+.lights {
+    background-color: #444;
+    overflow: hidden;
+}
+.curtains {
+    margin: 0 auto;
+    max-width: 700px;
+    height: 500px;
+    background: url('/assets/images/window.png') no-repeat center top / cover;
+    position: relative;
+    overflow: hidden;
+    .curtain__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('/assets/images/curtain.png') no-repeat center top / cover;
+        z-index: 1;
+    }
+    .curtain__item {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        -webkit-transition: left .5s ease-in-out;
+        transition: left .5s ease-in-out;
+        &.curtain--left {
+            background: url('/assets/images/curtain-left.jpg') no-repeat right top / cover;
+            &.curtain--open {
+                left: -50%;
+            }
+            &.curtain--close {
+                left: 0;
+            }
+        }
+        &.curtain--right {
+            background: url('/assets/images/curtain-right.jpg') no-repeat left top / cover;
+            &.curtain--open {
+                left: 100%;
+            }
+            &.curtain--close {
+                left: 50%;
+            }
+        }
+    }
+}

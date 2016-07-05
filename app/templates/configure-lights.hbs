@@ -1,0 +1,27 @@
+<div class="page-header">
+    {{#if isOn}}
+        <h1>Lights <small>State: ON</small></h1>
+    {{else}}
+        <h1>Lights <small>State: OFF</small></h1>
+    {{/if}}
+</div>
+
+<div class="panel panel-default box--shadow">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-xs-6">
+                Configure Lights
+            </div>
+            <div class="col-xs-6 text-right">
+                {{#if isOn}}
+                    <button type="button" {{action "toggleLights"}} class="btn btn-danger btn-sm box--shadow">Turn Off Lights</button>
+                {{else}}
+                    <button type="button" {{action "toggleLights"}} class="btn btn-success btn-sm box--shadow">Turn On Lights</button>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    <div class="panel-body text-center lights">
+        <span class="lightbulb {{if isOn 'lightbulb--on' 'lightbulb--off'}}"></span>
+    </div>
+</div>

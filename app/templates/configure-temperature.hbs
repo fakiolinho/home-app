@@ -1,0 +1,19 @@
+<div class="page-header">
+    <h1>Temperature <small>{{model.temperature}} &#8451; (Celsius Degrees)</small></h1>
+</div>
+
+<div class="panel panel-default box--shadow">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-xs-6">
+                Configure Temperature
+            </div>
+            <div class="col-xs-6 text-right">
+                <span class="label label-success">{{model.temperature}} &#8451;</span>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <input type="range" min=15 max=45 value={{model.temperature}} onchange={{action "changeTemperature" value="target.value"}} />
+    </div>
+</div>
