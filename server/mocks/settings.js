@@ -3,19 +3,26 @@ module.exports = function(app) {
     var express = require('express');
     var settingsRouter = express.Router();
 
-    // Default settings passed to SPA
+    /*
+    * Default settings passed to SPA
+    */
     var settings = {
         lights: true,
         curtains: false,
         temperature: 25
     };
 
-    // Feed our SPA routes with default data
+    /*
+    * Feed our SPA routes with default data
+    */
     settingsRouter.get('/', function(req, res) {
         res.json({settings});
     });
 
-    // Update server's default data based on users interactions
+    /*
+    * Update server's settings data based on users interactions
+    * through our SPA pages
+    */
     settingsRouter.put('/', function(req, res) {
         var property = req.body.property,
             value = req.body.value;
