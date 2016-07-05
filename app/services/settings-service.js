@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
+    // Communicate with nodejs server
+    // and inform it for any updates
     update(data) {
         Ember.$.ajax({
                 url: '/api/settings',
