@@ -8,12 +8,20 @@
             <div class="col-xs-6">
                 Configure Temperature
             </div>
-            <div class="col-xs-6 text-right">
-                <span class="label label-success">{{model.temperature}} &#8451;</span>
-            </div>
+            <div class="col-xs-6 text-right"></div>
         </div>
     </div>
     <div class="panel-body">
-        <input type="range" min=15 max=45 value={{model.temperature}} onchange={{action "changeTemperature" value="target.value"}} />
+        <div class="row">
+            <div class="col-xs-12">
+                <span class="label label-primary pull-left">20 &#8451;</span>
+                <span class="label label-warning pull-right">40 &#8451;</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <input type="range" min=20 max=40 value={{model.temperature}} onchange={{action "changeTemperature" value="target.value"}} />
+            </div>
+        </div>
     </div>
 </div>
