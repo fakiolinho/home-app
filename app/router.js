@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('configure-lights');
   this.route('configure-temperature');
   this.route('configure-curtains');
+  this.route('error', { path: '/*wildcard' });
 });
 
 export default Router;

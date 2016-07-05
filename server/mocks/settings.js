@@ -16,7 +16,7 @@ module.exports = function(app) {
         var property = req.body.property,
             value = req.body.value;
         settings[property] = value;
-        
+
         res.json({settings});
     });
 

@@ -1,12 +1,17 @@
 @import "bootstrap";
+$blue: #0390d7;
+
+// Layout
 body {
     padding-top: 80px;
-    background-color: #eee;
+    background-color: #f2f2f2;
 }
+
+// Typography
 .text--blue {
-    color: #0390d7;
+    color: $blue;
     &:hover {
-        color: #0390d7;
+        color: $blue;
     }
 }
 .no-padding {
@@ -24,6 +29,8 @@ body {
 .panel-heading {
     line-height: 30px;
 }
+
+// Control Panel Page
 .configuration__option {
     display: block;
     text-align: center;
@@ -47,6 +54,8 @@ body {
         }
     }
 }
+
+// Lights Page
 .lightbulb {
     display: inline-block;
     width: 150px;
@@ -74,6 +83,8 @@ body {
     background-color: #444;
     overflow: hidden;
 }
+
+// Curtains Page
 .curtains {
     margin: 0 auto;
     max-width: 700px;
@@ -116,5 +127,14 @@ body {
                 left: 50%;
             }
         }
+    }
+}
+
+// Error Page
+.error {
+    .error--code {
+        font-size: 60px;
+        letter-spacing: 5px;
+        text-shadow: 8px 8px #d4d4d4;
     }
 }

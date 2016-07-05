@@ -9,8 +9,8 @@ export default Ember.Service.extend({
                 cache: 'false',
                 data: JSON.stringify(data)
             })
-            .success(function(data) {
-                console.log(data);
+            .success(function(response) {
+                return response;
             })
             .error(function(err) {
                 console.log(err);
