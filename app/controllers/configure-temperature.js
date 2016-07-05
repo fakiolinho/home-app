@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
     settingsService: Ember.inject.service('settings-service'),
 
     actions: {
-        // Action handler to to toggle temperature's setting
+        // Action handler to toggle temperature's setting
         changeTemperature(value) {
             this.set('model.temperature', value);
             this._changeTemperature(value);

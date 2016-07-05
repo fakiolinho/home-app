@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
     }),
 
     actions: {
-        // Action handler to to toggle curtains setting
+        // Action handler to toggle curtains setting
         toggleCurtains() {
             let curtains = !this.get('model.curtains');
 

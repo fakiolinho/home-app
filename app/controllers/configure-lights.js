@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
     }),
 
     actions: {
-        // Action handler to to toggle lights setting
+        // Action handler to toggle lights setting
         toggleLights() {
             let lights = !this.get('model.lights');
 
