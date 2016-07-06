@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
             let curtains = !this.get('model.curtains');
 
             this.set('model.curtains', curtains);
-            this._changeCurtains(curtains);
+            this._storeCurtains(curtains);
         }
     },
 
@@ -30,7 +30,7 @@ export default Ember.Controller.extend({
     * Private method to use service's update method
     * and inform nodejs server for any updates
     */
-    _changeCurtains(value) {
+    _storeCurtains(value) {
         this.get('settingsService').update({
             property: 'curtains',
             value: value

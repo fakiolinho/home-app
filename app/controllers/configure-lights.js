@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
             let lights = !this.get('model.lights');
 
             this.set('model.lights', lights);
-            this._changeLights(lights);
+            this._storeLights(lights);
         }
     },
 
@@ -30,7 +30,7 @@ export default Ember.Controller.extend({
     * Private method to use service's update method
     * and inform nodejs server for any updates
     */
-    _changeLights(value) {
+    _storeLights(value) {
         this.get('settingsService').update({
             property: 'lights',
             value: value

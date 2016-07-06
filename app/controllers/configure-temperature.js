@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
         */
         changeTemperature(value) {
             this.set('model.temperature', value);
-            this._changeTemperature(value);
+            this._storeTemperature(value);
         }
     },
 
@@ -20,7 +20,7 @@ export default Ember.Controller.extend({
     * Private method to use service's update method
     * and inform nodejs server for any updates
     */
-    _changeTemperature(value) {
+    _storeTemperature(value) {
         this.get('settingsService').update({
             property: 'temperature',
             value: value
