@@ -5,11 +5,11 @@ export default Ember.Route.extend({
         /*
         * Resolve settings data from API endpoint '/api/settings'
         */
-        return {
+        return Ember.RSVP.hash({
             lights: Ember.$.getJSON('/api/settings')
                 .then(function(data) {
                     return data.settings.lights;
                 })
-        };
+        });
     }
 });
